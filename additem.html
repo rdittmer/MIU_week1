@@ -1,0 +1,51 @@
+<!doctype html>
+
+<!--Ryan Dittmer
+	Week 1
+	MIU 1208      -->
+
+<html>
+	<head>
+		<!-- Character Set Meta -->
+		<meta charset="utf-8"/>
+		<meta name="keywords"    content="level, game, puzzle, tracker"/>
+		<meta name="description" content="Keep track of levels"/>
+		<meta name="robots"      content="noindex, nofollow"/>
+		<meta name="viewport"    content="user-scalable=no, width=device-width"/>
+		<meta name="viewport"    content="target-densitydpi=device-dpi"/>
+		<link href="styles.css"   rel="stylesheet"/>
+		<title>Level Tracker</title>
+	</head>
+	<body>
+		<h1>Level Tracker</h1>
+		<p>Fill in the information below and click submit to add the level to the tracker.</p>
+		<form action ="#" method="post" id="levelForm">
+			<fieldset id="fieldId">
+				<legend>Add A Level</legend>
+					<ul id="errors"></ul>
+					<ul>
+					<li id="group"><label for="group">Level Group:</label></li>
+					<li><h2>Level info:</h2></li>
+					<li><label for="levelName">Level Name:</label><input type="text" id="levelName"/></li>
+					<li><label for="numberFloors">Number of Floors:<input type="range" min="1" max="50" id="numberFloors"/></li>
+					<li><span>Difficulty:</span></li>
+						<ul>
+					    <li><input type="radio" name="difficulty" id="Beginner" value="Beginner"/><label for="Beginner">Beginner</label></li>
+					    <li><input type="radio" name="difficulty" id="Intermediate" value="Intermediate"/><label for="Intermediate">Intermediate</label></li>
+					    <li><input type="radio" name="difficulty" id="Advanced" value="Advanced"/><label for="Advanced">Advanced</label></li>
+					    </ul> 
+					<li><label for="date">Date:</label><input type="date" id="date"/></li>
+					<li><label for="notes">Notes:</label><textarea id="notes"></textarea></li>
+					</ul>
+			</fieldset>
+			<input type="submit" value="Submit Level" id="submit"/>
+		</form>
+		<nav>
+			<a href="#" id="clear">Clear stored data</a>
+			<a href="#" id="displayData">Display data</a>
+			<a href="additem.html" id="addNew" style="display:none;">Add new Level</a>
+		</nav>
+		<script src="json.js"  type="text/javascript"></script>
+		<script src="main.js" type="text/javascript"></script>
+	</body>
+</html>
